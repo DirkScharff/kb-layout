@@ -1,0 +1,10 @@
+{
+    "compileTypeScript": true,
+    "typeScriptConfigFile": "./tsconfig.json",
+    "templates": [
+        {
+            "modelFile": "layout.json",
+            "templateFile": "karabiner.template.ts"
+        }
+    ]
+} 

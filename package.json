@@ -1,0 +1,11 @@
+{
+  "name": "kb-layout",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@yellicode/core": "^1.5.0",
+    "@yellicode/templating": "^1.8.0",
+    "lodash": "^4.17.21"
+  }
+}
