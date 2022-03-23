@@ -8,7 +8,25 @@
   </head>
   <body>
     <a href="karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fdirkscharff.github.io%2Fkb-layout%2Foutput.json"
-      >File</a
+      >Import to Karabiner</a
     >
+    <div id="myData"></div>
+    <script>
+      fetch('output.json')
+        .then(function (response) {
+          return response.json()
+        })
+        .then(function (data) {
+          appendData(data)
+        })
+        .catch(function (err) {
+          console.log('error: ' + err)
+        })
+      function appendData(data) {
+        var mainContainer = document.getElementById('myData')
+        var pre = document.createElement('pre')
+        pre.innerHTML = JSON.stringify(data, null, 2)
+      }
+    </script>
   </body>
 </html>
