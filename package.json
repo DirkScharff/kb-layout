@@ -9,6 +9,6 @@
     "lodash": "^4.17.21"
   },
   "scripts": {
-    "build": "npx yellicode"
+    "build": "yellicode"
   }
 }
