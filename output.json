@@ -1,0 +1,122 @@
+{
+  "title": "Definition of Caps Lock Layer",
+  "rules": [
+    {
+      "description": "Definition of Caps Lock Layer",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "caps_lock"
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "caps_lock_activated",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "caps_lock_activated",
+                "value": 0
+              }
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "caps_lock_activated",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "w"
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "caps_lock_activated",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "a"
+          },
+          "to": [
+            {
+              "key_code": "left_arrow"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "caps_lock_activated",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "s"
+          },
+          "to": [
+            {
+              "key_code": "down_arrow"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "caps_lock_activated",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "d"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "caps_lock_activated",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "q"
+          },
+          "to": [
+            {
+              "key_code": "home"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
