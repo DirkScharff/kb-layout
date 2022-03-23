@@ -2,7 +2,7 @@ import { TextWriter } from '@yellicode/core'
 import { Generator } from '@yellicode/templating'
 import _ from 'lodash'
 
-Generator.generateFromModel({ outputFile: './output.json' }, (writer: TextWriter, model: any) => {
+Generator.generateFromModel({ outputFile: 'output/output.json' }, (writer: TextWriter, model: any) => {
     console.log(model)
 
     let manipulators = []
@@ -35,7 +35,7 @@ Generator.generateFromModel({ outputFile: './output.json' }, (writer: TextWriter
                                                 },
                                             },
                                         ],
-                                        type:'basic'
+                                        type: 'basic'
                                     })
                                 }
                             }
@@ -45,25 +45,25 @@ Generator.generateFromModel({ outputFile: './output.json' }, (writer: TextWriter
             })
         }
 
-        Object.entries(other).forEach(([layer, entry])=>{
+        Object.entries(other).forEach(([layer, entry]) => {
             Object.entries(entry).forEach(([key, value]) => {
                 manipulators.push({
-                    conditions:[
+                    conditions: [
                         {
                             name: `${layer}_activated`,
                             type: 'variable_if',
                             value: 1
                         }
                     ],
-                    from:{
+                    from: {
                         key_code: key
                     },
-                    to:[
+                    to: [
                         {
                             key_code: value
                         }
                     ],
-                    type:'basic'
+                    type: 'basic'
                 })
             })
         })
