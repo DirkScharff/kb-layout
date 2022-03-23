@@ -74,6 +74,10 @@ Generator.generateFromModel({ outputFile: 'output/output.json' }, (writer: TextW
         description: model.description,
         manipulators,
     }
+    let base = {
+        title: `${model.description}`,
+        rules: [config]
+    }
 
-    writer.write(JSON.stringify(config, null, 2))
+    writer.write(JSON.stringify(base, null, 2))
 })
