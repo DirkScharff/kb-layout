@@ -14,7 +14,8 @@
             "w": "up_arrow",
             "a": "left_arrow",
             "s": "down_arrow",
-            "d": "right_arrow"
+            "d": "right_arrow",
+            "q": "home"
         }  
     }
 }
